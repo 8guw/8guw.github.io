@@ -6,6 +6,16 @@
 		<title>
 			The Magical Encounter of the Rain Fairy
 		</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+							$(document).ready(function() {
+							  $(".expand-button").click(function() {
+								$(this).find(".grammar").toggleClass("grammar2");
+								$(this).toggleClass("cross");
+								$(this).next(".expandable-text").toggle();
+							  });
+							});	
+		</script>
 		<style>
 			html, body {
 				margin:0;
@@ -29,6 +39,14 @@
                 -webkit-hyphens: auto;
                 word-spacing: -0.15em;
             }
+			.ss{
+			text-decoration: none;
+			}
+			.cross{
+				text-decoration: line-through;
+				 text-decoration-color: red;
+                text-decoration-thickness: 4px;
+			}
             u.spelling {
                 text-decoration: red wavy underline;
             }
@@ -37,14 +55,24 @@
                 text-decoration-color: red;
                 text-decoration-thickness: 4px;
             }
+			 u.grammar2 {
+				text-decoration: none;
+                text-decoration-color: red;
+                text-decoration-thickness: 4px;
+            }
+			span.expandable-text{
+				color: white;
+				background-color: red;
+			}
 		</style>
+
 	</head>
 	
-	<body>
+	<body>		
 		The Magical Encounter of the Rain Fair<br>
 
 
-<p>The wind was blowing harder and the rain was getting <u class="grammar">heavier</u>. The hedgehog was worried because the heavy rain might have damaged its vegetable garden on the hill. It didn’t wait and rushed to the garden in the storm. While checking the damage, there was a loud noise and a strange light flashed across the sky, landing in the garden.<br><br>
+<p>The wind was blowing harder and the rain was getting <span class="expand-button"><u class="grammar">heavier</u></span>  <span class="expandable-text" style="display: none;">This is the hidden text that will be expanded.</span>. The hedgehog was worried because the heavy rain might have damaged its vegetable garden on the hill. It didn’t wait and rushed to the garden in the storm. While checking the damage, there was a loud noise and a strange light flashed across the sky, landing in the garden.<br><br>
 
 The hedgehog found something glowing on a leaf. It picked it up and saw a tiny fairy who had fainted. The hedgehog placed her under a rock to keep her dry. Soon, the fairy woke up and told the hedgehog that she was a rain fairy who had been struck by lightning and fell. She thanked the hedgehog for saving her.<br><br>
 
