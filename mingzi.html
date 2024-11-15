@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			我的名字的由來
+		</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+		
+							$(document).ready(function() {
+								
+							  $(".expand").click(function() {
+								$(this).find(".grammar").toggleClass("grammar2");
+								$(this).toggleClass("cross");
+								$(this).next(".expandable-text").fadeToggle("slow");
+							  });
+							});	
+		</script>
+		<style>
+			html, body {
+				margin:0;
+				padding: 4%;
+			}
+			
+			html {
+				font-size: 62.5%; /* Set 1rem = 10px */
+				font-family:"Kaiti SC",TH-Khaai-TP0,TH-Khaai-TP2,TH-Feon-A,楷体,KaiTi,楷体_GB2312,KaiTi_GB2312,FandolKai,华文楷体,STKaiti,TH-Khaai-PP0,TH-Khaai-PP2,Kai,"Kaiti TC",BiauKai,"AR PL UKai CN",標楷體,DFKai-SB,"AR PL UKai HK","AR PL UKai TW",全字庫正楷體,TW-Kai,EUDCKAI,cursive; 
+			}
+			
+			body {
+				font-size: 2rem; /* Reset default font size back to 16px in rem */
+
+
+			}
+            p{
+                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                word-spacing: -0.15em;
+            }
+			.ss{
+			text-decoration: none;
+			}
+			.cross{
+				text-decoration: line-through;
+				 text-decoration-color: red;
+                text-decoration-thickness: 4px;
+			}
+            u.spelling {
+                text-decoration: red wavy underline;
+            }
+			
+			.eng {
+			    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+				
+			}
+			
+            u.grammar {
+				text-decoration: underline;
+                text-decoration-color: red;
+                text-decoration-thickness: 4px;
+            }
+			 u.grammar2 {
+				text-decoration: none;
+                text-decoration-color: red;
+                text-decoration-thickness: 4px;
+            }
+			
+			.inden{
+				text-indent: 40px;
+			}
+			.expandable-text{
+				color: white;
+				background-color: red;
+			}
+		</style>
+
+	</head>
+	
+	<body>		
+		<div style="text-align: center;">我的名字的由來</div>
+
+
+<p class="inden">金鋼琢: 我叫金鋼琢,爸爸取此名予我,名字含意來源於多個經典,大日經疏十二曰：「金剛喻如來秘密慧也。金剛無有法能破壞之者，而破壞萬物，此智慧亦爾。」, 三藏法數五曰：「金剛者，金中最剛，故云金剛。」禮學記云:玉不琢,不成器;人不學,不知道.是故,古之王者建國君民,教學為先.剛通鋼,這個名字是希望我,運用智慧來破解萬物奧妙,學習萬物規律,這是爸爸對我的期望,所以 取名"金鋼琢".</p>
+
+	</body>
+</html>
