@@ -11,10 +11,10 @@
 		
 							$(document).ready(function() {
 								
-								  $(".expandg").click(function() {
-									$(this).find(".grammar").toggleClass("grammar2");
+								  $(".eg").click(function() {
+									$(this).find(".g").toggleClass("g2");
 									$(this).toggleClass("cross");
-									$(this).next(".expandable-text").fadeToggle("slow");
+									$(this).next(".et").fadeToggle("slow");
 								  });
 						
 								$(".expands").click(function() {
@@ -72,12 +72,13 @@
 				
 			}
 			
-            u.grammar {
+            u.g {
+		    margin: 2px;
 				text-decoration: underline;
                 text-decoration-color: red;
                 text-decoration-thickness: 4px;
             }
-			 u.grammar2 {
+			 u.g2 {
 				text-decoration: none;
                 text-decoration-color: red;
                 text-decoration-thickness: 4px;
@@ -87,7 +88,7 @@
 
 				text-indent: 40px;
 			}
-			.expandable-text{
+			.et{
 				color: white;
 				background-color: red;
 			}
@@ -103,7 +104,7 @@
 		<div style="text-align: center;">11月15日 星期五 小雨</div>
 
 
-<p class="inden">自然老师<span class="expands"><u class="spelling">刚</u></span><span class="expandable-texts" style="display: none;">正</span>准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知<span class="expandg"><u class="grammar">到</u></span><span class="expandable-text" style="display: none;">道</span>原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</p>
+<p class="inden">自然老师<span class="eg"><u class="g">刚</u></span><span class="et" style="display: none;">正</span>准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知<span class="eg"><u class="g">到</u></span><span class="et" style="display: none;">道</span>原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</p>
 <!-- <script>
 									let font = new FontFace('kaiu', 'url(../../8guw/fonts/kaiu.ttf)');
 
