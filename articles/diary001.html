@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			11月15日 星期五 小雨
+		</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+		
+							$(document).ready(function() {
+								
+								  $(".expandg").click(function() {
+									$(this).find(".grammar").toggleClass("grammar2");
+									$(this).toggleClass("cross");
+									$(this).next(".expandable-text").fadeToggle("slow");
+								  });
+						
+								$(".expands").click(function() {
+									$(this).find(".spelling").toggleClass("spelling2");
+									$(this).toggleClass("cross");
+									$(this).next(".expandable-texts").fadeToggle("slow");
+								  });
+							});	
+
+		</script>
+		<style type="text/css">
+		<!-- @import url(https://fonts.bunny.net/css?family=lxgw-wenkai-tc:100); -->
+			html, body {
+				margin:0;
+				padding: 4%;
+			}
+			
+			html {
+				font-size: 62.5%; /* Set 1rem = 10px */
+				 font-family: "Kaiti SC",TH-Khaai-TP0,TH-Khaai-TP2,TH-Feon-A,楷体,KaiTi,楷体_GB2312,KaiTi_GB2312,FandolKai,华文楷体,STKaiti,TH-Khaai-PP0,TH-Khaai-PP2,Kai,"Kaiti TC",BiauKai,"AR PL UKai CN",標楷體,DFKai-SB,"AR PL UKai HK","AR PL UKai TW",全字庫正楷體,TW-Kai,EUDCKAI,cursive;
+				<!-- font-family: 'LXGW WenKai TC', handwriting; -->
+			}
+			
+			body {
+				font-size: 2rem; /* Reset default font size back to 16px in rem */
+
+
+			}
+            p{
+				line-height: 2;
+                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                word-spacing: -0.05em;
+            }
+			.ss{
+			text-decoration: none;
+			}
+			.cross{
+				text-decoration: line-through;
+				 text-decoration-color: red;
+                text-decoration-thickness: 4px;
+			}
+            u.spelling {
+				text-decoration: underline;
+                text-decoration-color: blue;
+                text-decoration-thickness: 4px;
+            }
+			u.spelling2 {
+			text-decoration: none;
+            }
+			
+			.eng {
+			    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+				
+			}
+			
+            u.grammar {
+				text-decoration: underline;
+                text-decoration-color: red;
+                text-decoration-thickness: 4px;
+            }
+			 u.grammar2 {
+				text-decoration: none;
+                text-decoration-color: red;
+                text-decoration-thickness: 4px;
+            }
+			
+			.inden{
+
+				text-indent: 40px;
+			}
+			.expandable-text{
+				color: white;
+				background-color: red;
+			}
+			.expandable-texts{
+				color: white;
+				background-color: blue;
+			}
+		</style>
+
+	</head>
+	
+	<body>		
+		<div style="text-align: center;">11月15日 星期五 小雨</div>
+
+
+<p class="inden">自然老师<span class="expands"><u class="spelling">刚</u></span><span class="expandable-texts" style="display: none;">正</span>准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知<span class="expandg"><u class="grammar">到</u></span><span class="expandable-text" style="display: none;">道</span>原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</p>
+<!-- <script>
+									let font = new FontFace('kaiu', 'url(../../8guw/fonts/kaiu.ttf)');
+
+								font.load().then(function(loadedFont) {
+								  document.fonts.add(loadedFont);
+								  document.body.style.fontFamily = 'kaiu'; 
+								});
+</script> -->
+	</body>
+</html>
