@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,19 +17,20 @@
 								$(this).next(".expandable-text").fadeToggle("slow");
 							  });
 							});	
+							const font = new FontFace('kaiu', 'url(../fonts/kaiu.ttf)');
+
+											font.load().then(function(loadedFont) {
+											  document.fonts.add(loadedFont);
+											  document.body.style.fontFamily = 'kaiu'; 
+											});
 		</script>
 		<style type="text/css">
-			@font-face {
-
-			  font-family: 'kaiu';
-
-			  src: url('../fonts/kaiu.ttf') format('truetype');
-
-			  font-weight: normal;
-
-			  font-style: normal;
-
-			}
+				@font-face {
+					font-family: 'kaiu';
+					src: url('../fonts/kaiu.ttf') format('truetype');
+					font-weight: normal;
+					font-style: normal;
+				}
 			html, body {
 				margin:0;
 				padding: 4%;
