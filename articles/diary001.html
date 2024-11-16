@@ -4,18 +4,24 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			我的名字的由來
+			11月15日 星期五 小雨
 		</title>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript">
 		
 							$(document).ready(function() {
 								
-							  $(".expand").click(function() {
-								$(this).find(".grammar").toggleClass("grammar2");
-								$(this).toggleClass("cross");
-								$(this).next(".expandable-text").fadeToggle("slow");
-							  });
+								  $(".eg").click(function() {
+									$(this).find(".g").toggleClass("g2");
+									$(this).toggleClass("cross");
+									$(this).next(".et").fadeToggle("slow");
+								  });
+						
+								$(".expands").click(function() {
+									$(this).find(".spelling").toggleClass("spelling2");
+									$(this).toggleClass("cross");
+									$(this).next(".expandable-texts").fadeToggle("slow");
+								  });
 							});	
 
 		</script>
@@ -28,12 +34,14 @@
 			
 			html {
 				font-size: 62.5%; /* Set 1rem = 10px */
-
+	
 			}
 			
 			body {
+			color: white;
+				background-color: black;
 				font-size: 2rem; /* Reset default font size back to 16px in rem */
-				font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+
 
 			}
             p{
@@ -53,7 +61,12 @@
                 text-decoration-thickness: 4px;
 			}
             u.spelling {
-                text-decoration: red wavy underline;
+				text-decoration: underline;
+                text-decoration-color: blue;
+                text-decoration-thickness: 4px;
+            }
+			u.spelling2 {
+			text-decoration: none;
             }
 			
 			.eng {
@@ -61,34 +74,81 @@
 				
 			}
 			
-            u.grammar {
-				text-decoration: underline;
-                text-decoration-color: red;
-                text-decoration-thickness: 4px;
+            u.g {
+		
+				
             }
-			 u.grammar2 {
-				text-decoration: none;
-                text-decoration-color: red;
-                text-decoration-thickness: 4px;
+			 u.g2 {
+				
             }
 			
 			.inden{
 
 				text-indent: 40px;
 			}
-			.expandable-text{
+			.et{
 				color: white;
 				background-color: red;
 			}
+			.expandable-texts{
+				color: white;
+				background-color: blue;
+			}
+			
+			.head1{
+			padding: 1px;
+			margin: 2px;
+			font-weight:800;
+			color: black;
+			border: 2px solid orange;
+			background-color: orange;
+			}
+			
+			.encircled {
+			color:red;
+							font-weight: 400;
+							display: flex; /* To center text */
+							  justify-content: center; /* To center text */
+							  align-items: center; /* To center text vertically */
+							  <!-- padding: 1em; -->
+							  <!-- text-align: center; -->
+							  <!-- width: 22px; -->
+							  <!-- height:22px; -->
+							  <!-- border-radius: 50%; -->
+							  <!-- background: red; -->
+							  <!-- border: 5px solid none; -->
+							}
+							
+			  .vertical-text {
+
+    writing-mode: vertical-rl;
+	height: 200px;
+	text-align: right;
+  }
+  			  .vertical-title {
+	writing-mode: vertical-rl; -webkit-writing-mode: vertical-rl; writing-mode: tb-rl; layout-flow: vertical-ideographic; overflow:auto; float:right;    *display: inline; overflow: auto; padding: 2px;
+    writing-mode: vertical-rl;
+	height: 200px;
+	<!-- text-align: midlle; -->
+	background-color:red;
+  }
+
 		</style>
 
 	</head>
 	
 	<body>		
-		<div style="text-align: center;">11月15日 星期五 小雨</div>
 
 
-<p class="inden">自然老师刚准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</p>
+	<div style="float: left; text-align: right;width: 86%; overflow-x:auto;">
+<p class="vertical-text">&nbsp;自然老师刚准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</p></div>
+	<div style="float: left;"><span class="vertical-title">11月15日 星期五 小雨</span></div>
+	<div style="float: right; width: 5%;"><span class="vertical-title">    草稿</span></div>
+
+
+	
+
+	<!-- <hr width="50%" size="2" color="red" align="center"noshade> -->
 <!-- <script>
 									let font = new FontFace('kaiu', 'url(../../8guw/fonts/kaiu.ttf)');
 
