@@ -8,22 +8,17 @@
 		</title>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript">
-		
 							$(document).ready(function() {
+							  $("u").click(function() {
+							  var idf = $(this).attr("class");
+							  <!-- console.log(idf);  -->
+							 $("u").removeClass("h");
+							 $("u").removeClass("nh");
+							 $("."+idf).addClass("h");
+							 <!-- $("."+idf).not(this).addClass("nh"); -->
 								
-								  $(".eg").click(function() {
-									$(this).find(".g").toggleClass("g2");
-									$(this).toggleClass("cross");
-									$(this).next(".et").fadeToggle("slow");
-								  });
-						
-								$(".expands").click(function() {
-									$(this).find(".spelling").toggleClass("spelling2");
-									$(this).toggleClass("cross");
-									$(this).next(".expandable-texts").fadeToggle("slow");
-								  });
+							  });
 							});	
-
 		</script>
 		<style type="text/css">
 		<!-- @import url(https://fonts.bunny.net/css?family=lxgw-wenkai-tc:100); -->
@@ -52,8 +47,12 @@
                 -webkit-hyphens: auto;
                 word-spacing: -0.05em;
             }
-			.ss{
-			text-decoration: none;
+			.h{
+			color: black;
+			background-color: white;
+			}
+			.nh{
+			background-color: black;
 			}
 			.cross{
 				text-decoration: line-through;
@@ -74,11 +73,11 @@
 				
 			}
 			
-            u.g {
+            .g1 {
 		
 				
             }
-			 u.g2 {
+			 .g2 {
 				
             }
 			
@@ -95,29 +94,7 @@
 				background-color: blue;
 			}
 			
-			.head1{
-			padding: 1px;
-			margin: 2px;
-			font-weight:800;
-			color: black;
-			border: 2px solid orange;
-			background-color: orange;
-			}
-			
-			.encircled {
-			color:red;
-							font-weight: 400;
-							display: flex; /* To center text */
-							  justify-content: center; /* To center text */
-							  align-items: center; /* To center text vertically */
-							  <!-- padding: 1em; -->
-							  <!-- text-align: center; -->
-							  <!-- width: 22px; -->
-							  <!-- height:22px; -->
-							  <!-- border-radius: 50%; -->
-							  <!-- background: red; -->
-							  <!-- border: 5px solid none; -->
-							}
+
 							
 			  .vertical-text {
 
@@ -138,32 +115,24 @@
 	</head>
 	
 	<body>		
+	<div width="100%" align="right" style="margin-bottom: 20px;">回首页</div>
 
-
-	<div class="vertical-text" style="margin-bottom: 20px;float: left; text-align: right;width: 80%; overflow-x:auto;">
-<span style="line-height: 2;">&nbsp;&nbsp;自然老师刚准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</span></div>
-	<div  class="vertical-title" style="border-left: 2px solid grey;float: left;width: 22px;"><span>11月15日 星期五 小雨</span></div>
+	<div class="vertical-text" style="padding: 0 0 10px; margin-bottom: 20px;float: left; text-align: right;width: 80%; overflow-x:auto;">
+<span class="content1" style="line-height: 2;">&nbsp;&nbsp;<u  class="a1">自然老师刚准备上课</u>，<u class="a2">一只猫就从门外跑了进来</u>。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</span></div>
+	<div  class="vertical-title" style="padding-left:5px;border-left: 2px solid grey;float: left;width: 22px;"><span>11月15日 星期五 小雨</span></div>
 	<div class="vertical-title" style="float: left; width: 20px;"><span>草稿</span></div>
 	
-		<div class="vertical-text" style="margin-bottom: 20px;float: left; text-align: right;width: 80%; overflow-x:auto;">
-<span style="line-height: 2;text-indent: 40px;">&nbsp;&nbsp;自然老师刚准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</span></div>
-	<div  class="vertical-title" style="border-left: 2px solid green;float: left;width: 22px;"><span>11月15日 星期五 小雨</span></div>
+		<div class="vertical-text" style="padding: 0 0 10px; margin-bottom: 20px;float: left; text-align: right;width: 80%; overflow-x:auto;">
+<span class="content2" style="line-height: 2;text-indent: 40px;">&nbsp;&nbsp;<u class="a1">自然老师刚准备上课</u>，<u class="a2">一只猫就从门外跑了进来</u>。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</span></div>
+	<div  class="vertical-title" style="padding-left:5px;border-left: 2px solid green;float: left;width: 22px;"><span>11月15日 星期五 小雨</span></div>
 	<div class="vertical-title" style="float: left; width: 20px;"><span>简化</span></div>
 	
 
-		<div class="vertical-text" style="margin-bottom: 20px;float: left; text-align: right;width: 80%; overflow-x:auto;">
-<span style="line-height: 2;text-indent: 40px;">&nbsp;&nbsp;自然老师刚准备上课，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</span></div>
-	<div  class="vertical-title" style="border-left: 2px solid red;float: left;width: 22px;"><span>11月15日 星期五 小雨</span></div>
+		<div class="vertical-text" style="padding: 0 0 10px; margin-bottom: 20px;float: left; text-align: right;width: 80%; overflow-x:auto;">
+<span class="content3" style="line-height: 2;text-indent: 40px;">&nbsp;&nbsp;<u>自然老师刚准备上课</u>，一只猫就从门外跑了进来。老师让大家安静下来后把猫放到一个安全的地方。下课后大家才知到原来是有人带过来的猫不小心被放跑了，正巧自然老师带着一些植物 本来到我们班，成功的把猫引了进来。</span></div>
+	<div  class="vertical-title" style="padding-left:5px;border-left: 2px solid red;float: left;width: 22px;"><span>11月15日 星期五 小雨</span></div>
 	<div class="vertical-title" style="float: left; width: 20px;"><span>定稿</span></div>
 
-	<!-- <hr width="50%" size="2" color="red" align="center"noshade> -->
-<!-- <script>
-									let font = new FontFace('kaiu', 'url(../../8guw/fonts/kaiu.ttf)');
 
-								font.load().then(function(loadedFont) {
-								  document.fonts.add(loadedFont);
-								  document.body.style.fontFamily = 'kaiu'; 
-								});
-</script> -->
 	</body>
 </html>
