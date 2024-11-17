@@ -9,6 +9,18 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript">
 							$(document).ready(function() {
+										  text1 = $("#p1").text(); 
+										const woc1 = text1.length;
+										wc1.textContent = "字数: " + woc1;
+										  text2 = $("#p2").text(); 
+										const woc2 = text2.length;
+										wc2.textContent = "字数: " + woc2;
+										 text3 = $("#p3").text(); 
+										const woc3 = text3.length;
+										wc3.textContent = "字数: " + woc3;
+			  <!-- const wc1 = text1.val().trim().split(/\s+/).length;  -->
+
+			  <!-- console.log("Word count:", text1,text);  -->
 							  $("u").click(function() {
 							  var idf = $(this).attr("class");
 							  <!-- console.log(idf);  -->
@@ -23,7 +35,7 @@
 		<style type="text/css">
 			html, body {
 				margin:0;
-				padding: 2%;
+				<!-- padding: 2%; -->
 			}
 			
 			html {
@@ -45,6 +57,19 @@
 						color: white;
 							font-size: 3rem;
 						}
+						
+						#head{
+									align: center;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 0px 4px 0px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
 						p{
 						line-height: 1.5;
 							text-indent: 70px;
@@ -57,7 +82,6 @@
 								height: 480px;
 							}
 						  .bigg {
-						  
 							height: 480px;
 							}
 							
@@ -65,7 +89,16 @@
 							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 3%;
 							font-size: 2rem;
 						}
+						 .wcc {
+										margin-top: 5px;
+										width: 90%;
+										text-align: right;
+										font-size: .7em;
+							  }
 					 }
+					 
+					 
+					 
 					 
 						 @media (min-width: 200px) and (max-width: 550px)
 					 {
@@ -73,11 +106,24 @@
 						{
 							font-size: 2rem;
 						}
+						
+						#head{
+
+									position: fixed;
+									background-color: black;
+									padding: 4px 14px 4px 14px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
 						p{
 						line-height: 1.5;
 							text-indent: 40px;
 						}
 						.big{
+						border-radius: 10px;
 						padding-right: 5px;
 								background: rgb(35,1,69);
 background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
@@ -93,6 +139,13 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
 							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 4%;
 							font-size: 1.5rem;
 						}
+						
+						  .wcc {
+										margin-top: 5px;
+										width: 90%;
+										text-align: right;
+										font-size: .8em;
+							  }
 					 }
 					 
 			.h{
@@ -164,17 +217,22 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
   display: inline-block;
   vertical-align: middle;
   }
+
 		</style>
 
 	</head>
 	
 	<body>		
+
+	<div id="head">
 	<div class="title_left">作文标题：「  11月15日 星期五 小雨 」</div><div width="20%" style="float: right;"><a href="https://8guw.github.io">回首页</a></div>
 	<div class="title_left">(点击任意分句都可查看对比)</div>
+	</div>
 <br><br>
+	<div id="bodybig">
 <div  class="bigg">
 	<div class="big">
-		<span class="content1">
+		<span class="content1" id="p1">
 		<p>
 		<u class="a1">自然老师刚准备上课</u>，<u class="a2">一只猫就从门外跑了进来</u>。老师让大家安静下来后把猫放到一个安全的地方。</p>
 		<p>
@@ -183,13 +241,12 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
 		</span>
 	</div>
 	<div  class="vertical-title">草稿</div>
-
-</div><br><br>
+</div><div class="wcc" id="wc1">字数0</div><br><br>
 
 
 <div  class="bigg">
 	<div class="big">
-		<span class="content1">
+		<span class="content1" id="p2">
 		<p>
 		<u class="a1">自然老师刚准备上课</u>，<u class="a2">一只猫就从门外跑了进来</u>。老师让大家安静下来后把猫放到一个安全的地方。</p>
 		<p>
@@ -198,12 +255,12 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
 		</span>
 	</div>
 	<div  class="vertical-title">简化</div>
-</div><br><br>
+</div><div class="wcc" id="wc2">字数0</div><br><br>
 
 
 <div  class="bigg">
 	<div class="big">
-		<span class="content1">
+		<span class="content1" id="p3">
 		<p>
 		<u class="a1">自然老师刚准备上课</u>，<u class="a2">一只猫就从门外跑了进来</u>。老师让大家安静下来后把猫放到一个安全的地方。</p>
 		<p>
@@ -212,7 +269,8 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
 		</span>
 	</div>
 	<div  class="vertical-title">定稿</div>
-</div><br><br>
+</div><div class="wcc" id="wc3">字数0</div><br><br>
 
+</div>
 	</body>
 </html>
