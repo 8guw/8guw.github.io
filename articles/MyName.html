@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 我的名字 </title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+							$(document).ready(function() {
+										  text1 = $("#p1").text(); 
+										const woc1 = text1.length;
+										wc1.textContent = "字数: " + woc1;
+										  text2 = $("#p2").text(); 
+										const woc2 = text2.length;
+										wc2.textContent = "字数: " + woc2;
+										 text3 = $("#p3").text(); 
+										const woc3 = text3.length;
+										wc3.textContent = "字数: " + woc3;
+			  <!-- const wc1 = text1.val().trim().split(/\s+/).length;  -->
+
+			  <!-- console.log("Word count:", text1,text);  -->
+							  $("u").click(function() {
+							  var idf = $(this).attr("class");
+
+							 $("u").removeClass("h");
+
+							 $("."+idf).addClass("h");
+
+								
+							  });
+							});	
+		</script>
+    <style type="text/css">
+			html, body {
+				margin:0;
+				<!-- padding: 2%; -->
+			}
+			
+			html {
+				font-size: 62.5%; /* Set 1rem = 10px */
+	
+			}
+			
+			body {
+			color: white;
+				background-color: black;
+				<!-- font-size: 2rem; /* Reset default font size back to 16px in rem */ -->
+
+
+			}
+			 @media (min-width: 550px) 
+					 {
+						body
+						{
+						color: white;
+							font-size: 3rem;
+						}
+						
+						#head{
+									align: center;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 0px 4px 0px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+						line-height: 1.5;
+							text-indent: 70px;
+						}
+						.big{
+						padding-right: 5px;
+								<!-- text-indent: 45px; -->
+								color: white;
+								float: left; width: 94%;overflow-y:auto;
+								height: 480px;
+							}
+						  .bigg {
+							height: 480px;
+							}
+							
+						.vertical-title{
+							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 3%;
+							font-size: 2rem;
+						}
+						 .wcc {
+										margin-top: 5px;
+										width: 90%;
+										text-align: right;
+										font-size: .7em;
+							  }
+					 }
+					 
+					 
+					 
+					 
+						 @media (min-width: 200px) and (max-width: 550px)
+					 {
+						body
+						{
+							font-size: 2rem;
+						}
+						
+						#head{
+
+									position: fixed;
+									background-color: black;
+									padding: 4px 14px 4px 14px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+						line-height: 1.5;
+							text-indent: 40px;
+						}
+						.big{
+						border-radius: 10px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: right; width: 90%;overflow-y:auto;
+								height: 280px;
+							}
+						  .bigg {
+						 
+							height: 280px;
+							}
+						.vertical-title{
+							margin-right: 6px;padding-right:5px;border-right: 2px solid red;float: left;width: 4%;
+							font-size: 1.5rem;
+						}
+						
+						  .wcc {
+										margin-top: 5px;
+										width: 90%;
+										text-align: right;
+										font-size: .8em;
+							  }
+					 }
+					 
+			.h{
+			text-decoration: none;
+			color: black;
+			background-color: yellow;
+			}
+			.nh{
+			background-color: black;
+			}
+			.cross{
+				text-decoration: line-through;
+				 text-decoration-color: red;
+                text-decoration-thickness: 4px;
+			}
+            u {
+				text-decoration: none;
+            }
+			u.spelling2 {
+			text-decoration: none;
+            }
+			
+			.eng {
+			    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+				
+			}
+			
+            .g1 {
+		
+				
+            }
+			 .g2 {
+				
+            }
+
+			.inden{
+
+				text-indent: 40px;
+			}
+			.et{
+				color: white;
+				background-color: red;
+			}
+			.expandable-texts{
+				color: white;
+				background-color: blue;
+			}
+			
+
+							
+
+ a {
+     color: #FFFFFF;
+     text-decoration: none;
+  }
+  a:hover {
+     color: #D90000;
+  }
+  a:active {
+     color: #FF0000;
+  }
+  a:visited {
+      color: #FFFFFF;
+  }
+  .title_left{
+  width: 80%;
+  font-size: 0.7em;float: left;color: white;
+    line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  }
+
+		</style>
+  </head>
+  <body>
+    <div id="head">
+      <div class="title_left">作文标题：「 我的名字 」</div>
+      <div width="20%" style="float: right;"><a href="https://8guw.github.io">回首
+          页</a></div>
+      <div class="title_left">(点击任意分句都可查看对比)</div>
+    </div>
+    <br>
+    <br>
+    <div id="bodybig">
+      <div class="bigg">
+        <div class="vertical-title">草稿</div>
+        <div class="big"> <span class="content1" id="p1">
+            <p> 
+            	<u class="a1 h">金钢琢：我叫金钢琢，爸爸给我起的，</u> 
+            	<u class="a2">名字里金钢是来自于佛家的经典，</u> 
+            	<u class="a3">其含意既指知会，金钢破坏万物，知会破解万物。</u>
+            	<u class="a4">琢来原于儒家礼记学记
+              篇：玉不琢，不成器；人不学，不知道。“是故，古之王者建国君民，教学为先。”</u>
+              <u class="a5">琢字的含意代表学习。这个名字是希望我学习知会，运用知会，探
+              寻人生哲理。所以却名金钢琢。 </u>
+            </p>
+          </span> </div>
+      </div>
+      <div class="wcc" id="wc1">字数: 286</div>
+      <br>
+      <br>
+      <div class="bigg">
+        <div class="big"> <span class="content1" id="p2">
+            <p> 
+            	<u class="a1 h">金钢琢：我叫金钢琢，名字是爸爸给我起的，</u> 
+            	<u class="a2">名字里金钢是来自于佛家的经典，</u> 
+            	<u class="a3">其含意既指知会，金钢破坏万物，知会破解万物。</u>
+            	<u class="a4">琢来原于儒家礼记学记
+              篇：玉不琢，不成器；人不学，不知道。“是故，古之王者建国君民，教学为先。”</u>
+              <u class="a5">琢字的含意代表学习。这个名字是希望我学习知会，运用知会，探
+              寻人生哲理。所以却名金钢琢。 </u>
+            </p>
+          </span> </div>
+        <div class="vertical-title">定稿</div>
+      </div>
+      <div class="wcc" id="wc2">字数: 286</div>
+      <br>
+      <br>
+      <div class="bigg">
+        <div class="big"> <span class="content1" id="p3">
+            <p> 
+            	<u class="a1 h">金钢琢：我叫金钢琢，爸爸给我起的，</u> 
+            	<u class="a2">名字里金钢是来自于佛家的经典，</u> 
+            	<u class="a3">其含意既指知会，金钢破坏万物，知会破解万物。</u>
+            	<u class="a4">琢来原于儒家礼记学记
+              篇：玉不琢，不成器；人不学，不知道。“是故，古之王者建国君民，教学为先。”</u>
+              <u class="a5">琢字的含意代表学习。这个名字是希望我学习知会，运用知会，探
+              寻人生哲理。所以却名金钢琢。 </u>
+            </p>
+          </span> </div>
+        <div class="vertical-title">英语化</div>
+      </div>
+      <div class="wcc" id="wc3">字数: 286</div>
+      <br>
+      <br>
+    </div>
+  
+
+</body></html>
