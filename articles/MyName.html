@@ -5,17 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> 我的名字 </title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../scripts/textcounter.min.js"></script>
     <script type="text/javascript">
 							$(document).ready(function() {
 										  text1 = $("#p1").text(); 
-										const woc1 = text1.length;
-										wc1.textContent = "字数: " + woc1;
+										$('#wcc1').val(text1);
+										$('#wcc1').textcounter({
+													type: "character",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+										
+										<!-- const woc1 = text1.length; -->
+										<!-- wc1.textContent = "字数: " + woc1; -->
+										
 										  text2 = $("#p2").text(); 
-										const woc2 = text2.length;
-										wc2.textContent = "字数: " + woc2;
-										 text3 = $("#p3").text(); 
-										const woc3 = text3.length;
-										wc3.textContent = "字数: " + woc3;
+										$('#wcc2').val(text2);
+										$('#wcc2').textcounter({
+													type: "character",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+										  
+										<!-- const woc2 = text2.length; -->
+										<!-- wc2.textContent = "字数: " + woc2; -->
+										 
+										<!-- const woc3 = text3.replace( /[^\w ]/g, "" ).split( /\s+/ ).length; -->
+										<!-- wc3.textContent = "字数: " + woc3; -->
+										text3 = $("#p3").text(); 
+										$('#wcc3').val(text3);
+										$('#wcc3').textcounter({
+													type: "word",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+
 			  <!-- const wc1 = text1.val().trim().split(/\s+/).length;  -->
 
 			  <!-- console.log("Word count:", text1,text);  -->
@@ -155,8 +182,8 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
 						}
 						
 						  .wcc {
-
-						  float: right;
+										display: none;
+										float: right;
 										margin-top: 6px;
 										width: 90%;
 										text-align: right;
@@ -251,7 +278,8 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
                 字的含意代表学习。这个名字是希望我学习知会，运用知会，探 寻人生哲理。所以却名金钢琢。 </u> </p>
           </span> </div>
       </div>
-      <div class="wcc" id="wc1">字数: 286</div>
+	  	  <textarea style="display: none;" id="wcc1"></textarea>
+      <!-- <div class="wcc" id="wc1">字数: 286</div> -->
       <br>
       <br>
       <div class="bigg">
@@ -264,17 +292,20 @@ background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rg
           </span> </div>
         <div class="vertical-title">定稿</div>
       </div>
-      <div class="wcc" id="wc2">字数: 293</div>
+	  <textarea style="display: none;" id="wcc2"></textarea>
+      <!-- <div class="wcc" id="wc2">字数: 293</div> -->
       <br>
       <br>
       <div class="bigg">
         <div class="big"> <span class="content1" id="p3">
             <p class="eng"> <u class="a1 h">My name is Jin Gang Zhuo, a name given to me by my father.</u><u class="a2"> The “Jin Gang” part comes from Buddhist scriptures, </u> <u class="a3">symbolizing wisdom that can both destroy and understand all things. </u>
-              <u class="a4">The “Zhuo” part is derived from Confucian teachings, specifically from the saying, “Jade must be polished to become a useful object; people must learn to gain knowledge.” This phrase emphasizes the importance of education in ancient times. </u> <u class="a5">The character “Zhuo” represents learning. My name reflects the hope that I will pursue wisdom, apply it, and explore the philosophy of life. Thus, I am named Jin Gangzhuo. </p>
+              <u class="a4">The “Zhuo” part is derived from Confucian teachings, specifically from the saying, “Jade must be polished to become a useful object; people must learn to gain knowledge.” This phrase emphasizes the importance of education in ancient times. </u> <u class="a5">The character “Zhuo” represents learning. My name reflects the hope that I will pursue wisdom, apply it, and explore the philosophy of life. Thus, I am named Jin Gangzhuo. </u></p>
           </span> </div>
         <div class="vertical-title">英语化</div>
       </div>
-      <div class="wcc" id="wc3">字数: 294</div>
+	    <textarea style="display: none;" id="wcc3"></textarea>
+      <!-- <div class="wcc" id="wc3"></div> -->
+	
       <br>
       <br>
     </div>
