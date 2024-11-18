@@ -115,28 +115,62 @@
 						line-height: 1.5;
 							text-indent: 70px;
 						}
-						
-/* width */
-div .big::-webkit-scrollbar {
-  width: 100px;
-}
+											/* width */
+											div .big::-webkit-scrollbar {
+											  width: 100px;
+											}
 
-/* Track */
-div .big::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-div .big::-webkit-scrollbar-thumb {
-  background: #666; 
-}
+											/* Track */
+											div .big::-webkit-scrollbar-track {
+											  background: #f1f1f1; 
+											}
+											 
+											/* Handle */
+											div .big::-webkit-scrollbar-thumb {
+											  background: #666; 
+											}
 
-/* Handle on hover */
-div .big::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
+											/* Handle on hover */
+											div .big::-webkit-scrollbar-thumb:hover {
+											  background: #555; 
+											}
+
+
+											/* Buttons */
+											 div .big::-webkit-scrollbar-button:single-button {
+											  background-color: #red;
+											  display: block;
+											  border-style: solid;
+											  height: 80px;
+											  width: 20px;
+											}
+											/* Up */
+											div .big::-webkit-scrollbar-button:single-button:vertical:decrement {
+											background-color: red;
+											  border-width: 0 8px 8px 8px;
+											  border-color: red;
+											}
+
+											div .big::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+											background-color: red;
+											  border-color: red;
+											}
+											/* Down */
+											div .big::-webkit-scrollbar-button:single-button:vertical:increment {
+											background-color: red;
+											  border-width: 0 8px 8px 8px;
+											  border-color: red;
+											}
+
+											div .big::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+											background-color: red;
+											  border-color: red;
+											}
+
 						
 						.big{
+						
+
 						
 												border: 1px solid;
 						border-radius: 10px;
