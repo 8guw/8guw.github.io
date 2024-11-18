@@ -1,11 +1,319 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>
-			11月15日 星期五 小雨
-		</title>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test page</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../scripts/textcounter.min.js"></script>
+    <script type="text/javascript">
+							$(document).ready(function() {
+										  text1 = $("#p1").text(); 
+										$('#wcc1').val(text1);
+										$('#wcc1').textcounter({
+										max: -1,
+													type: "character",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+										
+										<!-- const woc1 = text1.length; -->
+										<!-- wc1.textContent = "字数: " + woc1; -->
+										
+										  text2 = $("#p2").text(); 
+										$('#wcc2').val(text2);
+										$('#wcc2').textcounter({
+										max: -1,
+													type: "character",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+										  
+										<!-- const woc2 = text2.length; -->
+										<!-- wc2.textContent = "字数: " + woc2; -->
+										 
+										<!-- const woc3 = text3.replace( /[^\w ]/g, "" ).split( /\s+/ ).length; -->
+										<!-- wc3.textContent = "字数: " + woc3; -->
+										text3 = $("#p3").text(); 
+										$('#wcc3').val(text3);
+										$('#wcc3').textcounter({
+										max: -1,
+													type: "word",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+
+			  <!-- const wc1 = text1.val().trim().split(/\s+/).length;  -->
+
+			  <!-- console.log("Word count:", text1,text);  -->
+							  $("u").click(function() {
+							  var idf = $(this).attr("class");
+
+							 $("u").removeClass("h");
+
+							 $("."+idf).addClass("h");
+
+								
+							  });
+							});	
+		</script>
+    <style type="text/css">
+			html, body {
+
+				margin:0;
+				<!-- padding: 2%; -->
+			}
+			
+			html {
+				font-size: 62.5%; /* Set 1rem = 10px */
+	
+			}
+			
+			body {
+												background-repeat: no-repeat scroll;
+												background-attachment: fixed;
+												width: 100%;
+														height:100%;
+
+														background: rgb(35,1,69);
+														background: -moz-linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+														background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+			color: white;
+				background-color: black;
+				<!-- font-size: 2rem; /* Reset default font size back to 16px in rem */ -->
+
+
+			}
+			 @media (min-width: 550px) 
+					 {
+						body
+						{
+						color: white;
+							font-size: 3rem;
+						}
+						
+						#head{
+									align: center;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 0px 4px 0px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+						                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+						line-height: 1.5;
+							text-indent: 70px;
+						}
+						.big{
+						
+												border: 1px solid;
+						border-radius: 10px;
+						border-image: linear-gradient(to top, rgba(61,1,82,1), rgba(104,41,213,1)) 1;
+						padding-left: 5px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: left; width: 94%;
+								overflow-y: scroll;
+								-webkit-overflow-scrolling: auto;
+								height: 480px;
+						
+						
+						
+						<!-- padding-right: 5px; -->
+								<!-- text-indent: 45px; -->
+								<!-- color: white; -->
+								<!-- float: left; width: 94%;overflow-y:auto; -->
+								<!-- height: 480px; -->
+							}
+						  .bigg {
+							height: 480px;
+							}
+							
+						.vertical-title{
+							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 3%;
+							font-size: 2rem;
+						}
+						 .wcc {
+										float: right;
+										margin-top: 5px;
+										width: 90%;
+										text-align: center;
+										font-size: .7em;
+							  }
+					 }
+					 
+					 
+					 
+					 
+						 @media (min-width: 200px) and (max-width: 550px)
+					 {
+						body
+						{
+						
+							font-size: 2rem;
+						}
+						
+						#head{
+						text-align: left;
+						font-size: 1.2em;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 14px 4px 14px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+						line-height: 1.5;
+							text-indent: 40px;
+						}
+						.big{
+
+						border: 1px solid;
+						border-radius: 10px;
+						border-image: linear-gradient(to top, rgba(61,1,82,1), rgba(104,41,213,1)) 1;
+						padding-left: 5px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: right; width: 82%;overflow-y:auto;
+								height: 280px;
+							}
+						  .bigg {
+						 
+							height: 280px;
+							}
+						.vertical-title{
+							margin-left: 16px;padding-right:5px;border-right: 2px solid red;float: left;width: 4%;
+							font-size: 1.5rem;
+						}
+						
+						  .wcc {
+										display: none;
+										float: right;
+										margin-top: 6px;
+										width: 90%;
+										text-align: right;
+										font-size: .7em;
+							  }
+					 }
+					 
+			.h{
+			text-decoration: none;
+			color: black;
+			background-color: yellow;
+			}
+			.nh{
+			background-color: black;
+			}
+			.cross{
+				text-decoration: line-through;
+				 text-decoration-color: red;
+                text-decoration-thickness: 4px;
+			}
+            u {
+				text-decoration: none;
+            }
+			u.spelling2 {
+			text-decoration: none;
+            }
+			
+			.eng {
+			    font-family: Calibri;
+				
+			}
+			
+            .g1 {
+		
+				
+            }
+			 .g2 {
+				
+            }
+
+			.inden{
+
+				text-indent: 40px;
+			}
+			.et{
+				color: white;
+				background-color: red;
+			}
+			.expandable-texts{
+				color: white;
+				background-color: blue;
+			}
+			
+
+							
+
+ a {
+     color: #FFFFFF;
+     text-decoration: none;
+  }
+  a:hover {
+     color: #D90000;
+  }
+  a:active {
+     color: #FF0000;
+  }
+  a:visited {
+      color: #FFFFFF;
+  }
+  .title_left{
+  width: 70%;
+  font-size: 0.7em;
+  float: right;
+    line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  }
+
+		</style>
   </head>
-  	<body><p style="writing-mode: vertical-rl; -webkit-writing-mode: vertical-rl;">测试竖体排版是否存在bug。</p>		</body>
+  <body>
+<div class="big">
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+<p>asdewcrewcfewvrewrverwvrfewbvrewvrevrebtrewvtrewbtrwbtrwbtrw</p>
+
+</div>
+  </body>
 </html>
