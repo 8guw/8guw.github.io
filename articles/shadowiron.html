@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>铁轨下的影子</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../scripts/textcounter.min.js"></script>
+    <script type="text/javascript">
+							$(document).ready(function() {
+										  text1 = $("#p1").text(); 
+										$('#wcc1').val(text1);
+										$('#wcc1').textcounter({
+													max: -1,
+													type: "character",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+										
+										<!-- const woc1 = text1.length; -->
+										<!-- wc1.textContent = "字数: " + woc1; -->
+										
+										  text2 = $("#p2").text(); 
+										$('#wcc2').val(text2);
+										$('#wcc2').textcounter({
+													max: -1,
+													type: "character",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+										  
+										<!-- const woc2 = text2.length; -->
+										<!-- wc2.textContent = "字数: " + woc2; -->
+										 
+										<!-- const woc3 = text3.replace( /[^\w ]/g, "" ).split( /\s+/ ).length; -->
+										<!-- wc3.textContent = "字数: " + woc3; -->
+										text3 = $("#p3").text(); 
+										$('#wcc3').val(text3);
+										$('#wcc3').textcounter({
+													max: -1,
+													type: "word",
+													countContainerElement: "div", 
+													countContainerClass: "wcc",
+													counterText : "字数: %d",  
+										});
+
+			  <!-- const wc1 = text1.val().trim().split(/\s+/).length;  -->
+
+			  <!-- console.log("Word count:", text1,text);  -->
+							  $('[class*="a"]').click(function() {
+							  var idf = $(this).attr("class");
+
+							 $('[class*="a"]').removeClass("h");
+
+							 $("."+idf).addClass("h");
+
+								
+							  });
+							});	
+		</script>
+   <style type="text/css">
+   @import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+			html, body {
+
+				margin:0;
+				<!-- padding: 2%; -->
+			}
+			
+			html {
+				font-size: 62.5%; /* Set 1rem = 10px */
+	
+			}
+			
+			body {
+			font-family: 'Source Sans Pro';
+												background-repeat: no-repeat scroll;
+												background-attachment: fixed;
+												width: 100%;
+														height:100%;
+
+														background: rgb(35,1,69);
+														background: -moz-linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+														background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+			color: white;
+				background-color: black;
+				<!-- font-size: 2rem; /* Reset default font size back to 16px in rem */ -->
+
+
+			}
+			
+			
+			
+			
+			
+			
+		@media (min-width: 1100px)
+					 {
+						body
+						{
+						color: white;
+							font-size: 3rem;
+						}
+						
+						#head{
+									align: center;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 0px 4px 0px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+						                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+						line-height: 1.5;
+							text-indent: 70px;
+						}
+											
+
+
+						
+						.big{
+						
+
+						
+												border: 1px solid;
+						border-radius: 10px;
+						border-image: linear-gradient(to top, rgba(61,1,82,1), rgba(104,41,213,1)) 1;
+						padding-left: 5px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: left; width: 94%;
+								overflow-y: scroll;
+								-webkit-overflow-scrolling: auto;
+								height: 480px;
+						
+						
+						
+						<!-- padding-right: 5px; -->
+								<!-- text-indent: 45px; -->
+								<!-- color: white; -->
+								<!-- float: left; width: 94%;overflow-y:auto; -->
+								<!-- height: 480px; -->
+							}
+						  .bigg {
+							height: 480px;
+							}
+							
+						.vertical-title{
+							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 3%;
+							font-size: 2rem;
+						}
+						 .wcc {
+										float: right;
+										margin-top: 5px;
+										width: 90%;
+										text-align: center;
+										font-size: .7em;
+							  }
+					 }				 
+
+
+			
+			
+			
+			
+			
+			
+			  @media (min-width: 1060px) and (max-width: 1100px)
+					 {
+						body
+						{
+						color: white;
+							font-size: 3rem;
+						}
+						
+						#head{
+									align: center;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 0px 4px 0px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+						                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+						line-height: 1.5;
+							text-indent: 70px;
+						}
+											/* width */
+											div .big::-webkit-scrollbar {
+											  width: 100px;
+											}
+
+											/* Track */
+											div .big::-webkit-scrollbar-track {
+											  background: #f1f1f1; 
+											}
+											 
+											/* Handle */
+											div .big::-webkit-scrollbar-thumb {
+											  background: #666; 
+											}
+
+											/* Handle on hover */
+											div .big::-webkit-scrollbar-thumb:hover {
+											  background: #555; 
+											}
+
+
+											/* Buttons */
+											 div .big::-webkit-scrollbar-button:single-button {
+											  background-color: #red;
+											  display: block;
+											  border-style: solid;
+											  height: 80px;
+											  width: 20px;
+											}
+											/* Up */
+											div .big::-webkit-scrollbar-button:single-button:vertical:decrement {
+											background-color: red;
+											  border-width: 0 8px 8px 8px;
+											  border-color: red;
+											}
+
+											div .big::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+											background-color: red;
+											  border-color: red;
+											}
+											/* Down */
+											div .big::-webkit-scrollbar-button:single-button:vertical:increment {
+											background-color: red;
+											  border-width: 0 8px 8px 8px;
+											  border-color: red;
+											}
+
+											div .big::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+											background-color: red;
+											  border-color: red;
+											}
+
+						
+						.big{
+						
+
+						
+												border: 1px solid;
+						border-radius: 10px;
+						border-image: linear-gradient(to top, rgba(61,1,82,1), rgba(104,41,213,1)) 1;
+						padding-left: 5px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: left; width: 94%;
+								overflow-y: scroll;
+								-webkit-overflow-scrolling: auto;
+								height: 480px;
+						
+						
+						
+						<!-- padding-right: 5px; -->
+								<!-- text-indent: 45px; -->
+								<!-- color: white; -->
+								<!-- float: left; width: 94%;overflow-y:auto; -->
+								<!-- height: 480px; -->
+							}
+						  .bigg {
+							height: 480px;
+							}
+							
+						.vertical-title{
+							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 3%;
+							font-size: 2rem;
+						}
+						 .wcc {
+										float: right;
+										margin-top: 5px;
+										width: 90%;
+										text-align: center;
+										font-size: .7em;
+							  }
+					 }
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 @media (min-width: 550px) and (max-width: 1060px)
+					 {
+						body
+						{
+						color: white;
+							font-size: 3rem;
+						}
+						
+						#head{
+									align: center;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 0px 4px 0px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+						                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+						line-height: 1.5;
+							text-indent: 70px;
+						}
+											
+
+
+						
+						.big{
+						
+
+						
+												border: 1px solid;
+						border-radius: 10px;
+						border-image: linear-gradient(to top, rgba(61,1,82,1), rgba(104,41,213,1)) 1;
+						padding-left: 5px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: left; width: 94%;
+								overflow-y: scroll;
+								-webkit-overflow-scrolling: auto;
+								height: 480px;
+						
+						
+						
+						<!-- padding-right: 5px; -->
+								<!-- text-indent: 45px; -->
+								<!-- color: white; -->
+								<!-- float: left; width: 94%;overflow-y:auto; -->
+								<!-- height: 480px; -->
+							}
+						  .bigg {
+							height: 480px;
+							}
+							
+						.vertical-title{
+							margin-left: 6px;padding-left:5px;border-left: 2px solid red;float: right;width: 1.3%;
+							font-size: 2rem;
+						}
+						 .wcc {
+										float: right;
+										margin-top: 5px;
+										width: 90%;
+										text-align: center;
+										font-size: .7em;
+							  }
+					 }
+					 
+					 
+					 
+					 
+					 
+					 
+						 @media (min-width: 200px) and (max-width: 550px)
+					 {
+						body
+						{
+						
+							font-size: 2rem;
+						}
+						
+						#head{
+						text-align: left;
+						font-size: 1.2em;
+									width: 100%;
+									position: fixed;
+									background-color: black;
+									padding: 4px 14px 4px 14px;
+						}
+						
+						#bodybig{
+									padding: 4%;
+						}
+						
+						p{
+                 text-align: justify;
+				 text-justify: inter-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+						line-height: 1.5;
+							text-indent: 40px;
+						}
+						.big{
+
+						border: 1px solid;
+						border-radius: 10px;
+						border-image: linear-gradient(to top, rgba(61,1,82,1), rgba(104,41,213,1)) 1;
+						padding-left: 5px;
+						padding-right: 5px;
+								background: rgb(35,1,69);
+background: linear-gradient(351deg, rgba(35,1,69,1) 0%, rgba(30,22,36,1) 37%, rgba(8,7,7,1) 100%);
+								color: white;
+								float: right; width: 82%;overflow-y:auto;
+								height: 280px;
+							}
+						  .bigg {
+						 
+							height: 280px;
+							}
+						.vertical-title{
+							margin-left: 16px;padding-right:5px;border-right: 2px solid red;float: left;width: 4%;
+							font-size: 1.5rem;
+						}
+						
+						  .wcc {
+										display: none;
+										float: right;
+										margin-top: 6px;
+										width: 90%;
+										text-align: right;
+										font-size: .7em;
+							  }
+					 }
+					 
+			.h{
+			text-decoration: none;
+			color: black;
+			background-color: yellow;
+			}
+			.nh{
+			background-color: black;
+			}
+			.cross{
+				text-decoration: line-through;
+				 text-decoration-color: red;
+                text-decoration-thickness: 4px;
+			}
+            u {
+				text-decoration: none;
+            }
+			u.spelling2 {
+			text-decoration: none;
+            }
+			
+			.eng {
+			    font-family: Calibri;
+				
+			}
+			
+            .g1 {
+		
+				
+            }
+			 .g2 {
+				
+            }
+
+			.inden{
+
+				text-indent: 40px;
+			}
+			.et{
+				color: white;
+				background-color: red;
+			}
+			.expandable-texts{
+				color: white;
+				background-color: blue;
+			}
+			
+
+							
+
+ a {
+     color: #FFFFFF;
+     text-decoration: none;
+  }
+  a:hover {
+     color: #D90000;
+  }
+  a:active {
+     color: #FF0000;
+  }
+  a:visited {
+      color: #FFFFFF;
+  }
+  .title_left{
+  width: 70%;
+  font-size: 0.7em;
+  float: right;
+    line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  }
+
+		</style>
+  </head>
+  <body>
+    <div id="head"> <a href="../index.html">《深夜课堂》</a> </div>
+    <br>
+    <br>
+    <div id="bodybig">
+      <div class="bigg">
+        <div class="vertical-title">草稿</div>
+        <div class="big"> 		<span class="content1" id="p1">
+            <p> 
+<u class="a1 h">天黑了，教室里桌子椅子粉笔黑板纷纷议论起来。</u><u class="a2">椅子说：“我比你们残，我从上课到下课咯吱咯吱的摇着，把我的 腰都摇酸了”</u><u class="a3">粉笔说：“下课时有些同学拿起我，在黑板上画画，把我某的快没了！”</u><u class="a4">黑板喜悦的说：“我好新福呀！老师只是在我身上写字。”</u><u class="a5">这时，课卓打断了它们 。“现在都快早上了，我们安静下来，等同学们 来吧！” </u></p>
+		</span> </div>
+      </div>
+	  	  <textarea style="display: none;" id="wcc1"></textarea>
+      <!-- <div class="wcc" id="wc1">字数: 286</div> -->
+      <br>
+      <br>
+      <div class="bigg">
+        <div class="big"> 		<span class="content1" id="p2">
+
+ <p><u class="a1 h">夜晚的课堂和白天完全不同，安静得出奇。月光透过窗户，给教室里投下长长的影子。课桌、椅子、粉笔和黑板围成一圈，发出低沉疲惫的声音。</u></p>
+
+<p><u class="a2">“又是一天，”课桌叹了口气，摸着自己被撞伤的角。“那些孩子根本不知道怎么安静地坐着。”</u></p>
+<p><u class="a2">椅子吱吱作响地点点头。“你看看我，今天至少有三个孩子在我身上摇来摇去，我的腿都快断了！”</u></p>
+
+<p><u class="a3">粉笔从盒子里探出头来，附和道：“你们觉得自己惨？我今天被折断了两次！两次啊！然后他们就把我扔在一边，好像我什么都不是。”</u></p>
+
+<p ><u class="a4">黑板站在大家后面，努力保持冷静的态度。“我们都有自己的任务，”它说道，尽管它身上满是一天的污迹和划痕。“但我真希望他们能对我温柔点，我的表面越来越难清理了。”</u></p>
+
+<p><u class="a4">讨论陷入了短暂的沉默，大家都沉浸在自己的思绪中。平时充满欢声笑语和学习热情的课堂，现在像是一个疲惫的庇护所。</u></p>
+
+<p><u class="a5">“你们觉得最后他们会感激我们吗？”课桌大声问道。</u></p>
+
+<p><u class="a5">“也许吧，”黑板若有所思地回答。“但在那之前，我们只能尽力而为，毕竟，我们在这里是为了帮助他们学习。”</u></p>
+
+<p><u class="a5">说完，课堂又恢复了宁静，仿佛在为迎接新一天的混乱和学习做准备。</u></p>
+		
+		</span> </div>
+        <div class="vertical-title">定稿</div>
+      </div>
+	  <textarea style="display: none;" id="wcc2"></textarea>
+      <!-- <div class="wcc" id="wc2">字数: 293</div> -->
+      <br>
+      <br>
+      <div class="bigg">
+        <div class="big"> 		<span class="content1" id="p3">
+	<p class="eng">
+<p><u class="a1 h">In the quiet of the night, the classroom was a different world. The moonlight streamed through the windows, casting long shadows across the room. The desks, chairs, chalk, and blackboard gathered in a circle, their voices low and weary.</u></p>
+
+<p><u class="a2">“Another rough day,” sighed Desk, rubbing a corner that had been particularly banged up. “Those kids just don’t know how to sit still.”</u></p>
+
+<p><u class="a2">Chair nodded, creaking slightly. “Tell me about it. I had at least three different kids rocking back and forth on me. My legs are killing me!”</u></p>
+
+<p><u class="a3">Chalk, resting in its tray, chimed in. “You think you have it bad? I was snapped in half twice today! Twice! And then they just tossed my pieces aside like I was nothing.”</u></p>
+
+<p><u class="a4">Blackboard, towering over the others, tried to maintain a calm demeanor. “We all have our roles to play,” it said, though even it had smudges and scratches from the day’s lessons. “But I do wish they’d be a bit gentler. My surface is getting harder to clean.”</u></p>
+
+<p><u class="a4">The group fell silent for a moment, each lost in their own thoughts. The classroom, usually filled with the sounds of learning and laughter, now felt like a sanctuary for these tired, overworked objects.</u></p>
+
+<p><u class="a5">“Do you think they’ll ever appreciate us?” Desk wondered aloud.</u></p>
+
+<p><u class="a5">“Maybe,” Blackboard replied thoughtfully. “But until then, we just have to keep doing our best. After all, we’re here to help them learn.”</u></p>
+
+<p><u class="a5">With that, the classroom settled into a peaceful silence, ready to face another day of chaos and learning when the sun rose again.</u></p>
+</p>
+
+		</span> </div>
+        <div class="vertical-title">英语化</div>
+      </div>
+	    <textarea style="display: none;" id="wcc3"></textarea>
+      <!-- <div class="wcc" id="wc3"></div> -->
+	
+      <br>
+      <br>
+    </div>
+  </body>
+</html>
